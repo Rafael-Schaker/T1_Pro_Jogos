@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://m01avq1h7det"]
+
+[ext_resource type="Texture2D" uid="uid://b1dh8vyttbr0n" path="res://bricks/Stones_Texture.png" id="1_yfuxl"]
+[ext_resource type="PackedScene" uid="uid://cs70yf64lqbo8" path="res://scenes/player.tscn" id="2_os0b8"]
+[ext_resource type="Texture2D" uid="uid://d323ikk7iot7k" path="res://icon.svg" id="3_fgnhm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7ddi"]
+size = Vector2(255, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8msks"]
+size = Vector2(122, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t06nm"]
+size = Vector2(255, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a24i7"]
+size = Vector2(127, 128)
+
+[node name="Level" type="Node"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(303, 760)
+metadata/_edit_group_ = true
+
+[node name="StonesTexture" type="Sprite2D" parent="StaticBody2D2"]
+scale = Vector2(1, 0.234375)
+texture = ExtResource("1_yfuxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_y7ddi")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(298, 466)
+metadata/_edit_group_ = true
+
+[node name="StonesTexture" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(-2.5, 0)
+scale = Vector2(0.488281, 0.234375)
+texture = ExtResource("1_yfuxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_8msks")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(685, 577)
+metadata/_edit_group_ = true
+
+[node name="StonesTexture" type="Sprite2D" parent="StaticBody2D4"]
+scale = Vector2(1, 0.234375)
+texture = ExtResource("1_yfuxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_t06nm")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(473, 45)
+metadata/_edit_group_ = true
+
+[node name="StonesTexture" type="Sprite2D" parent="StaticBody2D5"]
+scale = Vector2(1, 0.234375)
+texture = ExtResource("1_yfuxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_y7ddi")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(826, 206)
+metadata/_edit_group_ = true
+
+[node name="StonesTexture" type="Sprite2D" parent="StaticBody2D6"]
+scale = Vector2(1, 0.234375)
+texture = ExtResource("1_yfuxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_y7ddi")
+
+[node name="Player" parent="." instance=ExtResource("2_os0b8")]
+position = Vector2(296, 654)
+
+[node name="Camera2D" parent="Player" index="3"]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.3
+drag_top_margin = 0.3
+drag_right_margin = 0.3
+drag_bottom_margin = 0.3
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(970, 21)
+collision_layer = 2
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("3_fgnhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_a24i7")
+
+[node name="SceneLimit" type="Marker2D" parent="."]
+position = Vector2(451, 959)
+
+[editable path="Player"]
