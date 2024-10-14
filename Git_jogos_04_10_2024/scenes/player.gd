@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed := 300.0
-@export var jump_speed := -2000.0
-@export var gravity := 4000.0
+@export var speed := 100.0
+@export var jump_speed := 10.0
+@export var gravity := 4.0
 @export var box : PackedScene
 
 @onready var sprite := $PlayerSprite
@@ -31,10 +31,6 @@ func get_side_input():
 		get_tree().call_group("HUD", "updateScore")
 		if not jumpSound.playing:
 			jumpSound.play()
-		# cria uma caixa na posição do jogador
-		var b := box.instantiate()
-		b.position = global_position
-		owner.add_child(b)
 	velocity.x = vel * speed
 	
 func animate():
