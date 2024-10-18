@@ -1,12 +1,16 @@
 extends CharacterBody2D
 
 @export var speed := 100.0
-@export var jump_speed := 10.0
+@export var jump_speed := 1.0
 @export var gravity := 4.0
 @export var box : PackedScene
 
 @onready var sprite := $PlayerSprite
 @onready var jumpSound := $JumpSound
+
+var isAttacking :bool = false
+var AttackCombo :int = 1
+var attackKey :bool = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("filter"):
@@ -16,7 +20,12 @@ func _input(event: InputEvent) -> void:
 			filtro.cutoff_hz = 20500
 		else:
 			filtro.cutoff_hz = 500
-	
+	if event.is_action_pressed("attack") and is_on_floor():
+		attack()
+	else:
+		AttackCombo = 0
+
+
 func get_8way_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
@@ -33,25 +42,37 @@ func get_side_input():
 			jumpSound.play()
 	velocity.x = vel * speed
 	
-func animate():
-	if velocity.x > 0:
-		sprite.play("right")
-	elif velocity.x < 0:
-		sprite.play("left")
-	elif velocity.y > 0:
-		sprite.play("down")
-	elif velocity.y < 0:
-		sprite.play("up")
+func attack():
+	if AttackCombo == 0:
+		sprite.play("attack_0")
+	elif AttackCombo == 1:
+		sprite.play("attack_1")
+	elif AttackCombo == 2:
+		sprite.play("attack_2")
+	isAttacking = true
+	await sprite.animation_finished
+	isAttacking = false
+	if AttackCombo == 2:
+		AttackCombo = 0
 	else:
-		sprite.stop()
+		AttackCombo += 1
+	
+func animate():
+	if velocity.y < 0:
+		sprite.play("jump")
+	elif velocity.y > 0:
+		sprite.play("fall")	
 		
 func animate_side():
-	if velocity.x > 0:
-		sprite.play("right")
-	elif velocity.x < 0:
-		sprite.play("left")
-	else:
-		sprite.stop()
+	if isAttacking: return
+	if velocity.x > 0 and is_on_floor():
+		sprite.flip_h = false
+		sprite.play("run") 
+	elif velocity.x < 0 and is_on_floor():
+		sprite.flip_h = true
+		sprite.play("run")
+	elif is_on_floor():
+		sprite.play("idle")
 		
 func move_8way(delta):
 	get_8way_input()
@@ -62,12 +83,14 @@ func move_8way(delta):
 		move_and_collide(velocity * delta * 10)
 		
 func move_side(delta):
-	velocity.y += gravity * delta
-	#print(velocity.y)
-	get_side_input()
-	animate_side()
-	move_and_slide()
+	if not isAttacking:
+		velocity.y += gravity * delta
+		#print(velocity.y)
+		get_side_input()
+		animate_side()
+		move_and_slide()
 
 func _physics_process(delta):
 	#move_8way(delta)
+	animate()
 	move_side(delta)
