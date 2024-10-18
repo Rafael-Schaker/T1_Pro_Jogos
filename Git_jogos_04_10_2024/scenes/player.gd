@@ -22,8 +22,6 @@ func _input(event: InputEvent) -> void:
 			filtro.cutoff_hz = 500
 	if event.is_action_pressed("attack") and is_on_floor():
 		attack()
-	else:
-		AttackCombo = 0
 
 
 func get_8way_input():
