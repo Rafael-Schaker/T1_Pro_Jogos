@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var gravity := 1600
 @export var box : PackedScene
 
+@onready var music := $"Slower2019-01-02-8BitMenu-DavidRenda-FesliyanStudios_com"
+
 @onready var sprite := $PlayerSprite
 @onready var idleShape := $IdleShape
 @onready var runShapeRight := $RunShapeRight

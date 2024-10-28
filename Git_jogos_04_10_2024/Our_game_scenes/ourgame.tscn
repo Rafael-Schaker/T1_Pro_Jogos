@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=4 uid="uid://drvus60vh3vxk"]
+[gd_scene load_steps=118 format=4 uid="uid://drvus60vh3vxk"]
 
 [ext_resource type="Texture2D" uid="uid://b3d0wai5k1mvb" path="res://Our_game_scenes/GRASS+.png" id="1_ohr0v"]
 [ext_resource type="Texture2D" uid="uid://dny0qqavblye5" path="res://Our_game_scenes/grassland_tileset/spritesheet/spritesheet.png" id="2_d3gxw"]
@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://dibpobhvrap70" path="res://Our_game_scenes/spell_2.tscn" id="44_tooyn"]
 [ext_resource type="PackedScene" uid="uid://cs70yf64lqbo8" path="res://scenes/player.tscn" id="45_2800x"]
 [ext_resource type="Script" path="res://Our_game_scenes/canvas_layer.gd" id="48_8r1uj"]
+[ext_resource type="AudioStream" uid="uid://bltxfv0820n8h" path="res://SFX/SLOWER2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3" id="48_qs6pe"]
 [ext_resource type="Texture2D" uid="uid://8cav2gtyyrje" path="res://Our_game_scenes/Scenes/Item 3-1.png.png" id="49_vwwf4"]
 [ext_resource type="PackedScene" uid="uid://gq6o3dva0eru" path="res://Our_game_scenes/game_over.tscn" id="50_a1qep"]
 [ext_resource type="PackedScene" uid="uid://xtiej3qf4vk5" path="res://continue.tscn" id="51_pt12p"]
@@ -2120,6 +2121,11 @@ disabled = true
 position = Vector2(-13, 2)
 shape = SubResource("RectangleShape2D_jvh0x")
 disabled = true
+
+[node name="Slower2019-01-02-8BitMenu-DavidRenda-FesliyanStudios_com" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("48_qs6pe")
+volume_db = -20.0
+bus = &"Music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("hearts")]
 script = ExtResource("48_8r1uj")
