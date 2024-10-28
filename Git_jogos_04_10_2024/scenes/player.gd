@@ -94,3 +94,7 @@ func _physics_process(delta):
 	#move_8way(delta)
 	animate()
 	move_side(delta)
+	
+func jump_side(x):
+	velocity.y = jump_speed
+	velocity.x = -x

@@ -1,0 +1,105 @@
+[gd_scene load_steps=21 format=3 uid="uid://dibpobhvrap70"]
+
+[ext_resource type="Script" path="res://Our_game_scenes/spell_2.gd" id="1_lgv85"]
+[ext_resource type="Texture2D" uid="uid://bcyd65ffwk2n6" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_1.png" id="2_3suk6"]
+[ext_resource type="Texture2D" uid="uid://ck4g0rdspwjs7" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_2.png" id="3_1lyvp"]
+[ext_resource type="Texture2D" uid="uid://cin3f1b820wht" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_3.png" id="4_o862w"]
+[ext_resource type="Texture2D" uid="uid://bjqrn37hfd3m" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_4.png" id="5_yjdcv"]
+[ext_resource type="Texture2D" uid="uid://bt2py0tj2ctem" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_5.png" id="6_w4li4"]
+[ext_resource type="Texture2D" uid="uid://dtp343bc8ofhx" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_6.png" id="7_ymfwc"]
+[ext_resource type="Texture2D" uid="uid://osdghmbrhef4" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_7.png" id="8_c8w71"]
+[ext_resource type="Texture2D" uid="uid://xjd0uaegqfco" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_8.png" id="9_rqhfx"]
+[ext_resource type="Texture2D" uid="uid://b10jywlgbsn0c" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_9.png" id="10_xcftp"]
+[ext_resource type="Texture2D" uid="uid://d2lo1mib875dy" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_10.png" id="11_ljdg6"]
+[ext_resource type="Texture2D" uid="uid://oibm433ikyq7" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_11.png" id="12_6n6ph"]
+[ext_resource type="Texture2D" uid="uid://btlijaw6bra7s" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_12.png" id="13_mne1q"]
+[ext_resource type="Texture2D" uid="uid://gdf72rqlvaor" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_13.png" id="14_beir2"]
+[ext_resource type="Texture2D" uid="uid://yg47r6aiogr4" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_14.png" id="15_wjb4h"]
+[ext_resource type="Texture2D" uid="uid://cetvt264sltmn" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_15.png" id="16_doq3c"]
+[ext_resource type="Texture2D" uid="uid://7nqua71kjkm5" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Spell/Bringer-of-Death_Spell_16.png" id="17_y4qfb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u7i4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3suk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1lyvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o862w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yjdcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w4li4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ymfwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c8w71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rqhfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xcftp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ljdg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6n6ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mne1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_beir2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wjb4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_doq3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_y4qfb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsdbq"]
+size = Vector2(49.171, 70.275)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln6o1"]
+size = Vector2(53.5292, 67.442)
+
+[node name="Spell2" type="RigidBody2D"]
+position = Vector2(2886, 350)
+scale = Vector2(1.33572, 1.50134)
+script = ExtResource("1_lgv85")
+
+[node name="Spell" type="AnimatedSprite2D" parent="."]
+position = Vector2(-28.4489, -9.32501)
+scale = Vector2(1.13101, 1.17323)
+sprite_frames = SubResource("SpriteFrames_u7i4p")
+autoplay = "default"
+frame_progress = 0.703165
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29.0771, 8.82321)
+shape = SubResource("RectangleShape2D_bsdbq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-28.449, 10.2397)
+shape = SubResource("RectangleShape2D_ln6o1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
