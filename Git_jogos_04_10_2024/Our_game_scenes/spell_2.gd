@@ -16,8 +16,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
 		var y_delta = position.y - body.position.y
 		var x_delta = position.x - body.position.x
-		print(y_delta)
-		game_manager.decrease_health()
-		game_manager.decrease_health()
-		game_manager.decrease_health()
+		#game_manager.decrease_health()
+		#game_manager.decrease_health()
+		#game_manager.decrease_health()
+		get_tree().change_scene_to_file("res://Our_game_scenes/continue.tscn")
 	pass # Replace with function body.

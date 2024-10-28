@@ -285,10 +285,6 @@ text = "Score: 0"
 
 [node name="Level" parent="." instance=ExtResource("4_y73ng")]
 
-[node name="Player" parent="Level" index="0"]
-jump_speed = -700.0
-gravity = 2000.0
-
 [node name="JumpSound" parent="Level/Player" index="0"]
 volume_db = -80.0
 
