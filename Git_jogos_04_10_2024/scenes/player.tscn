@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cs70yf64lqbo8"]
 
-[ext_resource type="Script" path="res://scenes/player2.gd" id="1_l3nhy"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_l3nhy"]
 [ext_resource type="AudioStream" uid="uid://bk2uiset80drx" path="res://SFX/jump1.ogg" id="3_1e8ih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_044hx"]
 size = Vector2(1, 5)
 
 [node name="Player" type="CharacterBody2D"]
+visible = false
 position = Vector2(5, 8)
 script = ExtResource("1_l3nhy")
 
