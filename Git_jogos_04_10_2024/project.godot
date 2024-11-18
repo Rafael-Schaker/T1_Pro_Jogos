@@ -13,7 +13,6 @@ config_version=5
 config/name="meujogo"
 run/main_scene="res://Our_game_scenes/ourgame.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 

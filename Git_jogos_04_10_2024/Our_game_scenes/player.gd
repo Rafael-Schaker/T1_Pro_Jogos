@@ -77,9 +77,6 @@ func get_side_input():
 		else:
 			jumpShapeLeft.disabled = false
 			
-		get_tree().call_group("HUD", "updateScore")
-		if not jumpSound.playing:
-			jumpSound.play()
 	velocity.x = vel * speed
 	
 func attack():
