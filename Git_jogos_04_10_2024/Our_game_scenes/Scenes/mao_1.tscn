@@ -65,6 +65,11 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 6.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tj4jb"]
@@ -81,8 +86,8 @@ script = ExtResource("1_6ques")
 position = Vector2(7.01605, 8.17367)
 scale = Vector2(0.805934, 0.744573)
 sprite_frames = SubResource("SpriteFrames_hht4t")
+animation = &"hit"
 autoplay = "default"
-frame_progress = 0.325768
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7.14732, 8.00357)
@@ -93,7 +98,6 @@ disable_mode = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(6.92913, 6)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3ixe8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

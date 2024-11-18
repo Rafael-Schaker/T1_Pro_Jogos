@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
 		game_manager.decrease_health()
-		game_manager.decrease_health()
-		game_manager.decrease_health()
+		#game_manager.decrease_health()
+		#game_manager.decrease_health()
 
 	pass # Replace with function body.

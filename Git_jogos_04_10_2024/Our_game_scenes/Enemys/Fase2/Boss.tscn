@@ -1,0 +1,283 @@
+[gd_scene load_steps=63 format=3 uid="uid://dgqs6nwrniyvi"]
+
+[ext_resource type="Script" path="res://Our_game_scenes/Enemys/Fase2/boss.gd" id="1_aidrx"]
+[ext_resource type="Texture2D" uid="uid://bbxbnhnjkcbc2" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_1.png" id="1_nexux"]
+[ext_resource type="Texture2D" uid="uid://c20adplgi3bn4" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_1.png" id="1_tafej"]
+[ext_resource type="Texture2D" uid="uid://boiya5l2t4o4i" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_2.png" id="2_c76uq"]
+[ext_resource type="Texture2D" uid="uid://bnppydwmwylai" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_2.png" id="2_ujg51"]
+[ext_resource type="Texture2D" uid="uid://djkbjr0w5isu4" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_3.png" id="3_bhl4k"]
+[ext_resource type="Texture2D" uid="uid://6vsj0rtjy3ni" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_3.png" id="3_e2kuf"]
+[ext_resource type="Texture2D" uid="uid://ca45a8nijkrtt" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_4.png" id="4_jfsv0"]
+[ext_resource type="Texture2D" uid="uid://wk4528u748xw" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_4.png" id="4_u4kx7"]
+[ext_resource type="Texture2D" uid="uid://kb80od7cpluq" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_5.png" id="5_5p7x0"]
+[ext_resource type="Texture2D" uid="uid://csq8uj47fdkmx" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_5.png" id="5_cy0dp"]
+[ext_resource type="Texture2D" uid="uid://cm677epe52fc5" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/01_demon_idle/demon_idle_6.png" id="6_ghtgf"]
+[ext_resource type="Texture2D" uid="uid://dm64qfahal10h" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_6.png" id="6_pr33v"]
+[ext_resource type="Texture2D" uid="uid://bswsn2xmwbx36" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_7.png" id="7_ms4av"]
+[ext_resource type="Texture2D" uid="uid://yp8gwv3h80fa" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_8.png" id="8_vfl2o"]
+[ext_resource type="Texture2D" uid="uid://bp7xqxdfua67v" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_9.png" id="9_yqsmc"]
+[ext_resource type="Texture2D" uid="uid://cqlkjrjywioa" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_10.png" id="10_g3cna"]
+[ext_resource type="Texture2D" uid="uid://262qeqbvcm88" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_11.png" id="11_6vwyl"]
+[ext_resource type="Texture2D" uid="uid://dg1y3oun5hsrb" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_12.png" id="12_tpb65"]
+[ext_resource type="Texture2D" uid="uid://crukv2uato8ig" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_13.png" id="13_onjv7"]
+[ext_resource type="Texture2D" uid="uid://lnqn7xofok1f" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_14.png" id="14_yb04x"]
+[ext_resource type="Texture2D" uid="uid://brlo6hondcnsq" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/03_demon_cleave/demon_cleave_15.png" id="15_0f6ac"]
+[ext_resource type="Texture2D" uid="uid://cpx1gjdxlgaed" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_1.png" id="16_ypk8t"]
+[ext_resource type="Texture2D" uid="uid://k0hqarpuds3e" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_2.png" id="17_581aw"]
+[ext_resource type="Texture2D" uid="uid://cta35cssevcli" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_3.png" id="18_l1tjh"]
+[ext_resource type="Texture2D" uid="uid://dso51te7ovqyh" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_4.png" id="19_6y4yx"]
+[ext_resource type="Texture2D" uid="uid://4wb2ffkmvh60" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/04_demon_take_hit/demon_take_hit_5.png" id="20_ctav6"]
+[ext_resource type="Texture2D" uid="uid://dw3ghys0ddcb5" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_1.png" id="21_nnaio"]
+[ext_resource type="Texture2D" uid="uid://bo5kwi2gcetao" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_2.png" id="22_2xebe"]
+[ext_resource type="Texture2D" uid="uid://daos5ftk5typ7" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_3.png" id="23_28mwl"]
+[ext_resource type="Texture2D" uid="uid://ct1dgyeuimdaw" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_4.png" id="24_ejktu"]
+[ext_resource type="Texture2D" uid="uid://c8cq1c16qdn4b" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_5.png" id="25_k6paq"]
+[ext_resource type="Texture2D" uid="uid://bynxonwsayjpw" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_6.png" id="26_jt8hj"]
+[ext_resource type="Texture2D" uid="uid://b1gsw472c5sfs" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_7.png" id="27_oxlq3"]
+[ext_resource type="Texture2D" uid="uid://col8x1kr0eqor" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_8.png" id="28_di72y"]
+[ext_resource type="Texture2D" uid="uid://bt3yhsrw71vr" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_9.png" id="29_rtltd"]
+[ext_resource type="Texture2D" uid="uid://16rxys6tpxe4" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_10.png" id="30_k71oq"]
+[ext_resource type="Texture2D" uid="uid://cfirx6lgv3t7m" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_11.png" id="31_lp780"]
+[ext_resource type="Texture2D" uid="uid://bi2sktej67f8h" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_12.png" id="32_i7h57"]
+[ext_resource type="Texture2D" uid="uid://b1rhp53a8p4re" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_13.png" id="33_tw8ki"]
+[ext_resource type="Texture2D" uid="uid://qt15gr25c7yy" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_14.png" id="34_73t1y"]
+[ext_resource type="Texture2D" uid="uid://cl3h58xyac0ry" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_15.png" id="35_ogmbj"]
+[ext_resource type="Texture2D" uid="uid://dqo5541hroht4" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_16.png" id="36_34twx"]
+[ext_resource type="Texture2D" uid="uid://be80h6ymcd8n4" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_17.png" id="37_an7s3"]
+[ext_resource type="Texture2D" uid="uid://d2gcwx8cqy51r" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_18.png" id="38_8yvfo"]
+[ext_resource type="Texture2D" uid="uid://cbgavebn1kyvo" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_19.png" id="39_gwwkd"]
+[ext_resource type="Texture2D" uid="uid://3dqyc5snkwbx" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_20.png" id="40_ik1l5"]
+[ext_resource type="Texture2D" uid="uid://dqw8rgx2s0gqc" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_21.png" id="41_7x50h"]
+[ext_resource type="Texture2D" uid="uid://bt6asbsx5q3d3" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/05_demon_death/demon_death_22.png" id="42_8k3et"]
+[ext_resource type="Texture2D" uid="uid://cakoxothgu47h" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_1.png" id="49_hg4bl"]
+[ext_resource type="Texture2D" uid="uid://ba1g0pncank6d" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_2.png" id="50_b0qvi"]
+[ext_resource type="Texture2D" uid="uid://c62rpdhusb0na" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_3.png" id="51_8dvi3"]
+[ext_resource type="Texture2D" uid="uid://bsdf0jpptpsle" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_4.png" id="52_t77ed"]
+[ext_resource type="Texture2D" uid="uid://dwdgujb20215x" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_5.png" id="53_8e1wq"]
+[ext_resource type="Texture2D" uid="uid://d2l6hjc1yfw4i" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_6.png" id="54_mqvjl"]
+[ext_resource type="Texture2D" uid="uid://jtaxy7jyoutw" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_7.png" id="55_34adj"]
+[ext_resource type="Texture2D" uid="uid://csuqp1af7p7j" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_8.png" id="56_q30vo"]
+[ext_resource type="Texture2D" uid="uid://cmihtwo0tj8bs" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_9.png" id="57_ereb7"]
+[ext_resource type="Texture2D" uid="uid://bfy2jyticqfsg" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_10.png" id="58_jh7al"]
+[ext_resource type="Texture2D" uid="uid://b2avwuqymx0fg" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_11.png" id="59_nnorc"]
+[ext_resource type="Texture2D" uid="uid://jmcxgsuifa6b" path="res://Our_game_scenes/Scenes/Second Level/Enemys/boss_demon_slime_FREE_v1.0/individual sprites/02_demon_walk/demon_walk_12.png" id="60_its37"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rndms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tafej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ujg51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bhl4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u4kx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cy0dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pr33v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ms4av")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vfl2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yqsmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g3cna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6vwyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tpb65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_onjv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yb04x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0f6ac")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ypk8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_581aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l1tjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6y4yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ctav6")
+}],
+"loop": true,
+"name": &"Damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_nnaio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2xebe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_28mwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ejktu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_k6paq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jt8hj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_oxlq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_di72y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rtltd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_k71oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_lp780")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_i7h57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_tw8ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_73t1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ogmbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_34twx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_an7s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_8yvfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_gwwkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_ik1l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7x50h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8k3et")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nexux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c76uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e2kuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jfsv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5p7x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ghtgf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nexux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_hg4bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_b0qvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_8dvi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_t77ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_8e1wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_mqvjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_34adj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_q30vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ereb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_jh7al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_nnorc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_its37")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 3
+script = ExtResource("1_aidrx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rndms")
+animation = &"Death"
+autoplay = "Idle"

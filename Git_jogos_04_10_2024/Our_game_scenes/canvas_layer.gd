@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 @export var hearts : Array[Node]
+@onready var animation_player: AnimationPlayer = $"../Player/AnimationPlayer"
+
 var lives = 3
 
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +17,7 @@ func _process(delta: float) -> void:
 func decrease_health():
 	lives -= 1
 	print(lives)
+	animation_player.play("Flash")
 	for h in 3:
 		if (h <lives):
 			hearts[h].show()

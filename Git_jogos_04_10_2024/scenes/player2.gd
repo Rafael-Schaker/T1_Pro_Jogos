@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed := 100.0
-@export var jump_speed := -700
+@export var jump_speed := -500
 @export var gravity := 1600
 @export var box : PackedScene
 

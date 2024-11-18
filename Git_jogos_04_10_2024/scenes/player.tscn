@@ -15,9 +15,10 @@ stream = ExtResource("3_1e8ih")
 bus = &"SFX"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -20)
+zoom = Vector2(2.5, 2.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_044hx")
 disabled = true

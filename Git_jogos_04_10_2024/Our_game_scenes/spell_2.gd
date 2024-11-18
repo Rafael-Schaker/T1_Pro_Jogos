@@ -19,5 +19,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		#game_manager.decrease_health()
 		#game_manager.decrease_health()
 		#game_manager.decrease_health()
-		get_tree().change_scene_to_file("res://Our_game_scenes/continue.tscn")
+		get_tree().change_scene_to_file("res://Our_game_scenes/game_over_continue.tscn")
 	pass # Replace with function body.
