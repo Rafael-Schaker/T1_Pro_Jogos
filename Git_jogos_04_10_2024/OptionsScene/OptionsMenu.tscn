@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://i0pq0c8giexr"]
+
+[ext_resource type="PackedScene" uid="uid://cy4vc6ty11og8" path="res://options_menu.tscn" id="1_867o0"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionsMenu" parent="." instance=ExtResource("1_867o0")]
+layout_mode = 1
