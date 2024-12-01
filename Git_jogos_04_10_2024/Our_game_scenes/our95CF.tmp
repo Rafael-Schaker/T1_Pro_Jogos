@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=4 uid="uid://drvus60vh3vxk"]
+[gd_scene load_steps=125 format=4 uid="uid://drvus60vh3vxk"]
 
 [ext_resource type="Texture2D" uid="uid://b3d0wai5k1mvb" path="res://Our_game_scenes/GRASS+.png" id="1_ohr0v"]
 [ext_resource type="Texture2D" uid="uid://dny0qqavblye5" path="res://Our_game_scenes/grassland_tileset/spritesheet/spritesheet.png" id="2_d3gxw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://w0o6xvofoj3u" path="res://Our_game_scenes/FreeCuteTileset/Tileset.png" id="5_j5fhj"]
 [ext_resource type="Texture2D" uid="uid://wwuff80w88eq" path="res://Our_game_scenes/Dungeon Tile Set.png" id="8_tniv5"]
 [ext_resource type="Script" path="res://Our_game_scenes/fall_area.gd" id="9_odpv3"]
+[ext_resource type="PackedScene" uid="uid://dtjmxd5ulralj" path="res://Our_game_scenes/Scenes/mao_1.tscn" id="10_begn2"]
 [ext_resource type="Texture2D" uid="uid://c12sbwcnlxhtj" path="res://Our_game_scenes/adventurer-Sheet.png" id="10_w01uo"]
 [ext_resource type="Texture2D" uid="uid://cdm18x78do6k7" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Cast/Bringer-of-Death_Cast_1.png" id="11_pqdty"]
 [ext_resource type="Texture2D" uid="uid://b1ehjxualjic4" path="res://Our_game_scenes/Enemys/Tutorial/Chefao/Cast/Bringer-of-Death_Cast_2.png" id="12_irp6f"]
@@ -2155,6 +2156,14 @@ one_way_collision_margin = 0.0
 
 [node name="Enemys" type="Node" parent="."]
 
+[node name="Mao3" parent="Enemys" instance=ExtResource("10_begn2")]
+position = Vector2(1864, 381)
+collision_layer = 2
+
+[node name="Mao2" parent="Enemys" instance=ExtResource("10_begn2")]
+position = Vector2(1521, 379)
+collision_layer = 2
+
 [node name="Boss" type="RigidBody2D" parent="Enemys"]
 position = Vector2(2968, 379)
 
@@ -2172,16 +2181,8 @@ shape = SubResource("RectangleShape2D_5yu2n")
 [node name="Spell2" parent="Enemys" instance=ExtResource("44_tooyn")]
 position = Vector2(2928, 352)
 
-[node name="MaoInimigo" parent="Enemys" instance=ExtResource("50_l0y0f")]
-position = Vector2(1825, 359)
-collision_layer = 3
-collision_mask = 3
-
-[node name="MaoInimigo2" parent="Enemys" instance=ExtResource("50_l0y0f")]
-position = Vector2(1024, 275)
-scale = Vector2(0.64, 0.64)
-collision_layer = 3
-collision_mask = 3
+[node name="CharacterBody2D" parent="Enemys" instance=ExtResource("50_l0y0f")]
+position = Vector2(767, 365)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("hearts")]
 script = ExtResource("48_8r1uj")

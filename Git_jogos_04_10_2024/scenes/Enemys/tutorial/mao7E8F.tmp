@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3yxr6yli5tvt"]
+
+[ext_resource type="Script" path="res://scenes/Enemys/tutorial/mao.gd" id="1_e26mo"]
+[ext_resource type="Texture2D" uid="uid://dbor7ol86e8vi" path="res://Our_game_scenes/Enemys/Tutorial/Mao/spr_enemy_mud_strip8.png" id="2_jd5fx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoxug"]
+size = Vector2(68.3594, 66.0498)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r4df"]
+size = Vector2(53.125, 46.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha4bp"]
+size = Vector2(1.25, 1.24999)
+
+[node name="Mao inimigo" type="CharacterBody2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_e26mo")
+speed = null
+gravity = null
+direction = null
+damage = null
+stuck_duration = null
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.125, 0.375003)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_xoxug")
+
+[node name="walking" type="Sprite2D" parent="."]
+position = Vector2(2.4, -0.949998)
+scale = Vector2(0.722581, 0.7125)
+texture = ExtResource("2_jd5fx")
+hframes = 8
+frame = 7
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-0.100002, 1.55)
+scale = Vector2(0.799999, 0.799999)
+shape = SubResource("RectangleShape2D_1r4df")
+
+[node name="floor Detector2" type="Area2D" parent="."]
+position = Vector2(-21.25, 21.25)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="DetectFloor" type="CollisionShape2D" parent="floor Detector2"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ha4bp")
+debug_color = Color(0.122535, 0.624562, 0.486025, 0.42)
+
+[node name="floor Detector" type="Area2D" parent="."]
+position = Vector2(21.25, 21.25)
+scale = Vector2(0.999999, 0.999999)
+
+[node name="DetectFloor" type="CollisionShape2D" parent="floor Detector"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ha4bp")
+debug_color = Color(0.122535, 0.624562, 0.486025, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="floor Detector2" to="." method="_on_floor_detector_2_body_shape_entered"]
+[connection signal="body_shape_entered" from="floor Detector2" to="." method="_on_floor_detector_body_shape_entered"]
+[connection signal="body_shape_exited" from="floor Detector2" to="." method="_on_floor_detector_body_shape_exited"]
+[connection signal="body_shape_entered" from="floor Detector" to="." method="_on_floor_detector_body_shape_entered"]
+[connection signal="body_shape_exited" from="floor Detector" to="." method="_on_floor_detector_body_shape_exited"]

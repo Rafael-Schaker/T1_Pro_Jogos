@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=4 uid="uid://dvcaahh7erv4j"]
+[gd_scene load_steps=95 format=4 uid="uid://dvcaahh7erv4j"]
 
 [ext_resource type="Texture2D" uid="uid://dny0qqavblye5" path="res://Our_game_scenes/grassland_tileset/spritesheet/spritesheet.png" id="1_qdk1m"]
 [ext_resource type="Script" path="res://Our_game_scenes/Scenes/Second Level/Hearts.gd" id="1_vkowt"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://br0dfqlacxalo" path="res://Our_game_scenes/Scenes/Second Level/PNGs/Water Tile.png" id="16_ve4ip"]
 [ext_resource type="Script" path="res://Our_game_scenes/Scenes/Second Level/continue_falling.gd" id="17_vr1t7"]
 [ext_resource type="PackedScene" uid="uid://dgqs6nwrniyvi" path="res://Our_game_scenes/Enemys/Fase2/Boss.tscn" id="23_qjp2n"]
+[ext_resource type="PackedScene" uid="uid://cod3s4wxly557" path="res://scenes/Enemys/fase2/papagaio.tscn" id="24_7gpdy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ub6uu"]
 texture = ExtResource("1_qdk1m")
@@ -4655,10 +4656,10 @@ radius = 6.0
 height = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5peyr"]
-size = Vector2(13.5, 28)
+size = Vector2(19.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlips"]
-size = Vector2(12, 28)
+size = Vector2(18, 30)
 
 [sub_resource type="Animation" id="Animation_rqx7x"]
 resource_name = "Flash"
@@ -4790,10 +4791,24 @@ position = Vector2(1362.8, 809.382)
 shape = SubResource("SegmentShape2D_cnkj3")
 one_way_collision_margin = 0.0
 
+[node name="Enemys" type="Node" parent="Map2"]
+
+[node name="StaticBody2D" parent="Map2/Enemys" instance=ExtResource("23_qjp2n")]
+position = Vector2(3995, 1515)
+
+[node name="Papagaio" parent="." instance=ExtResource("24_7gpdy")]
+top_level = true
+light_mask = 231
+visibility_layer = 524287
+position = Vector2(727, 1505)
+motion_mode = 1
+platform_floor_layers = 3
+platform_wall_layers = 3
+
 [node name="Player" parent="." instance=ExtResource("13_8gb18")]
 top_level = true
 visibility_layer = 237567
-position = Vector2(361, 732)
+position = Vector2(577, 1480)
 collision_layer = 3
 collision_mask = 3
 
@@ -4851,14 +4866,12 @@ position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_is8wx")
 
 [node name="AttackShapeRight" type="CollisionShape2D" parent="Player"]
-visible = false
-position = Vector2(13.25, 2)
+position = Vector2(16.25, 1.5)
 shape = SubResource("RectangleShape2D_5peyr")
 disabled = true
 
 [node name="AttackShapeLeft" type="CollisionShape2D" parent="Player"]
-visible = false
-position = Vector2(-13, 2)
+position = Vector2(-16, 1)
 shape = SubResource("RectangleShape2D_rlips")
 disabled = true
 
@@ -4871,11 +4884,6 @@ bus = &"Music"
 libraries = {
 "": SubResource("AnimationLibrary_vxpvn")
 }
-
-[node name="Enemys" type="Node" parent="."]
-
-[node name="StaticBody2D" parent="Enemys" instance=ExtResource("23_qjp2n")]
-position = Vector2(3995, 1515)
 
 [connection signal="body_entered" from="Map2/Death" to="Map2/Death" method="_on_body_entered"]
 [connection signal="body_entered" from="Map2/Continue2" to="Map2/Continue2" method="_on_body_entered"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cod3s4wxly557"]
+
+[ext_resource type="Script" path="res://scenes/Enemys/fase2/papagaio.gd" id="1_pjkse"]
+[ext_resource type="Texture2D" uid="uid://b44nfma1tffo5" path="res://scenes/Enemys/fase2/Sprites/without_outline/FLYING.png" id="2_ttyv4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxxpi"]
+size = Vector2(62.3047, 56.4624)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1a46"]
+size = Vector2(45, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2sy7"]
+atlas = ExtResource("2_ttyv4")
+region = Rect2(0, 0, 79, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1ljc"]
+atlas = ExtResource("2_ttyv4")
+region = Rect2(79, 0, 79, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diq43"]
+atlas = ExtResource("2_ttyv4")
+region = Rect2(158, 0, 79, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80315"]
+atlas = ExtResource("2_ttyv4")
+region = Rect2(237, 0, 79, 69)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4imag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2sy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1ljc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diq43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80315")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Papagaio" type="CharacterBody2D"]
+script = ExtResource("1_pjkse")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.38419e-07, 4.76837e-07)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_dxxpi")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+scale = Vector2(0.799999, 0.799999)
+shape = SubResource("RectangleShape2D_n1a46")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_4imag")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.750584
