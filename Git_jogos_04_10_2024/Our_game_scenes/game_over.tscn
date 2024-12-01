@@ -17,14 +17,17 @@ texture = ExtResource("2_sg0s1")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 416.0
-offset_top = 208.0
-offset_right = -416.0
-offset_bottom = -328.0
+offset_left = 421.0
+offset_top = 135.0
+offset_right = -411.0
+offset_bottom = -401.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game Over"
+theme_override_font_sizes/font_size = 25
+text = "You DIED,
+GAME OVER!"
 horizontal_alignment = 1
+vertical_alignment = 1
 uppercase = true
 
 [node name="Quit" type="Button" parent="."]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://options_menu.gd" id="1_fx67j"]
 [ext_resource type="Texture2D" uid="uid://do2yg3t64hv2l" path="res://scenes/360_F_555570224_pWg5NK83SS2Zk9phs4voTBb2PCIiKliz.jpg" id="2_rncq0"]
-[ext_resource type="FontFile" uid="uid://bv3lpyq30tmnn" path="res://scenes/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="3_6qbxp"]
+[ext_resource type="FontFile" uid="uid://bv3lpyq30tmnn" path="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="3_6qbxp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7opwk"]
 

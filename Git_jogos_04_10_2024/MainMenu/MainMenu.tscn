@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_5qcfy"]
 [ext_resource type="Texture2D" uid="uid://2k0od7vivmfh" path="res://scenes/abstract-blaze-fire-flames-texture-background.webp" id="1_6rw51"]
-[ext_resource type="FontFile" uid="uid://bv3lpyq30tmnn" path="res://scenes/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="2_bshbh"]
+[ext_resource type="FontFile" uid="uid://bv3lpyq30tmnn" path="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="2_bshbh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6wic"]
 

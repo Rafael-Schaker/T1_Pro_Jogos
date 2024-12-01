@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bv3lpyq30tmnn"
-path="res://.godot/imported/IcelandWinterstorm_PERSONAL_USE_ONLY.otf-57962615025e10fded83ffe94698c1aa.fontdata"
+path="res://.godot/imported/IcelandWinterstorm_PERSONAL_USE_ONLY.otf-9d260b08cc2809eacdad07eed6603418.fontdata"
 
 [deps]
 
-source_file="res://scenes/IcelandWinterstorm_PERSONAL_USE_ONLY.otf"
-dest_files=["res://.godot/imported/IcelandWinterstorm_PERSONAL_USE_ONLY.otf-57962615025e10fded83ffe94698c1aa.fontdata"]
+source_file="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf"
+dest_files=["res://.godot/imported/IcelandWinterstorm_PERSONAL_USE_ONLY.otf-9d260b08cc2809eacdad07eed6603418.fontdata"]
 
 [params]
 
