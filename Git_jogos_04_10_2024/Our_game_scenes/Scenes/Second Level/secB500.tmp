@@ -3326,47 +3326,26 @@ texture = ExtResource("11_ifine")
 3:27/0 = 0
 3:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:27/0 = 0
-5:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:27/0 = 0
-6:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:27/0 = 0
-7:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:27/0 = 0
-8:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:27/0 = 0
-9:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:27/0 = 0
-10:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:27/0 = 0
-11:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:27/0 = 0
-12:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:27/0 = 0
-13:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:27/0 = 0
-14:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:27/0 = 0
-15:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:27/0 = 0
-16:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:27/0 = 0
-17:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:27/0 = 0
-18:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:27/0 = 0
-19:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:27/0 = 0
-20:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:27/0 = 0
-21:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:27/0 = 0
-22:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 23:27/0 = 0
-23:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:27/0 = 0
-24:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 25:27/0 = 0
-25:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 28:27/0 = 0
 28:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 29:27/0 = 0
@@ -4292,8 +4271,8 @@ a = Vector2(1527, -27.8547)
 b = Vector2(-146.998, -28.0104)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_are31"]
-a = Vector2(-4795, 1932)
-b = Vector2(-4794, 2133)
+a = Vector2(201, 20)
+b = Vector2(199, -137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ol5w"]
 atlas = ExtResource("14_exgvv")
@@ -4821,58 +4800,29 @@ one_way_collision_margin = 0.0
 [node name="Enemys" type="Node" parent="Map2"]
 
 [node name="StaticBody2D" parent="Map2/Enemys" instance=ExtResource("23_qjp2n")]
-visible = false
 position = Vector2(3995, 1515)
 
 [node name="Spawner" type="Node" parent="Map2/Enemys"]
 
 [node name="Area2D2" type="Area2D" parent="Map2/Enemys/Spawner"]
-position = Vector2(3311, 1511)
+position = Vector2(713, 1516)
 script = ExtResource("22_knd3g")
 enemy_scene = ExtResource("24_7gpdy")
-
-[node name="Papagaio3" parent="Map2/Enemys/Spawner/Area2D2" instance=ExtResource("24_7gpdy")]
-top_level = true
-light_mask = 231
-visibility_layer = 524287
-position = Vector2(1718, 1495)
-motion_mode = 1
-platform_floor_layers = 3
-platform_wall_layers = 3
-
-[node name="Papagaio3" parent="Map2/Enemys/Spawner/Area2D2/Papagaio3" instance=ExtResource("24_7gpdy")]
-top_level = true
-light_mask = 231
-visibility_layer = 524287
-position = Vector2(1718, 1495)
-motion_mode = 1
-platform_floor_layers = 3
-platform_wall_layers = 3
-
-[node name="Papagaio2" parent="Map2/Enemys/Spawner/Area2D2" instance=ExtResource("24_7gpdy")]
-top_level = true
-light_mask = 231
-visibility_layer = 524287
-position = Vector2(1404, 1411)
-motion_mode = 1
-platform_floor_layers = 3
-platform_wall_layers = 3
 
 [node name="Papagaio" parent="Map2/Enemys/Spawner/Area2D2" instance=ExtResource("24_7gpdy")]
 top_level = true
 light_mask = 231
 visibility_layer = 524287
-position = Vector2(902, 1477)
+position = Vector2(524, 1558)
 motion_mode = 1
 platform_floor_layers = 3
 platform_wall_layers = 3
 
 [node name="Timer" type="Timer" parent="Map2/Enemys/Spawner/Area2D2"]
-wait_time = 2.0
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map2/Enemys/Spawner/Area2D2"]
-position = Vector2(4796, -2120)
+position = Vector2(-102, 16)
 shape = SubResource("SegmentShape2D_are31")
 
 [node name="Player" parent="." instance=ExtResource("13_8gb18")]
@@ -4883,7 +4833,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(-7.51019e-06, -1)
+position = Vector2(-7.51019e-06, 0)
 scale = Vector2(0.947095, 0.974662)
 sprite_frames = SubResource("SpriteFrames_4f0e5")
 animation = &"fall"

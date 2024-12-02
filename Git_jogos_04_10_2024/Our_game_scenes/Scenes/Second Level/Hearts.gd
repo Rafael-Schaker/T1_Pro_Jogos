@@ -15,14 +15,13 @@ func _process(delta: float) -> void:
 	pass
 	
 func decrease_health():
-	#lives -= 1
-	#print(lives)
-	#animation_player.play("Flash")
-	get_tree().change_scene_to_file("res://Our_game_scenes/game_over_continue.tscn")
-	#for h in 3:
-	#	if (h <lives):
-	#		hearts[h].show()
-	#	else:
-	#		hearts[h].hide()
-	#if(lives == 0):
-	#	get_tree().change_scene_to_file("res://Our_game_scenes/game_over_continue.tscn")
+	lives -= 1
+	print(lives)
+	animation_player.play("Flash")
+	for h in 3:
+		if (h <lives):
+			hearts[h].show()
+		else:
+			hearts[h].hide()
+	if(lives == 0):
+		get_tree().change_scene_to_file("res://Our_game_scenes/game_over_continue.tscn")

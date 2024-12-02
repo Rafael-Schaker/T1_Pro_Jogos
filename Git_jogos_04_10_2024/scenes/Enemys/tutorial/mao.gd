@@ -8,32 +8,35 @@ extends CharacterBody2D
 
 @onready var game_manager = $"../../CanvasLayer" # Gerenciador do jogo, ajuste o caminho se necessário
 
+var is_stuck: bool = false # Indica se o inimigo está parado após colidir
 var stuck_timer: float = 0.0 # Tempo acumulado parado
-@export var stuck_duration: float = 2.0 # Tempo necessário para mudar de direção
+@export var stop_duration: float = 1.0 # Tempo necessário para ficar parado antes de mudar de direção
 
 func _physics_process(delta: float):
-	# Aplicar gravidade no eixo vertical
-	velocity.y += gravity * delta
-
-	# Verificar se está tocando o chão
-	if is_on_floor():
-		# Movimento horizontal apenas no chão
-		velocity.x = direction * speed
-		stuck_timer = 0.0 # Resetar o timer quando está no chão
-	else:
-		# Se não está no chão, parar o movimento horizontal
-		velocity.x = 0
+	if is_stuck:
+		# Contar o tempo enquanto o inimigo está parado
 		stuck_timer += delta
-		if stuck_timer >= stuck_duration:
-			direction *= -1 # Inverter direção após ficar parado
-			stuck_timer = 0.0 # Resetar o timer
+		if stuck_timer >= stop_duration:
+			is_stuck = false # Retomar movimento
+			stuck_timer = 0.0
+			direction *= -1 # Inverter a direção
+	else:
+		# Aplicar gravidade no eixo vertical
+		velocity.y += gravity * delta
 
-	# Mover o inimigo
-	move_and_slide()
+		# Movimento horizontal
+		velocity.x = direction * speed
+		move_and_slide()
 
-	# Verificar se colidiu com uma parede no eixo horizontal
-	if is_on_wall():
-		direction *= -1 # Inverter direção horizontal
+		# Verificar se colidiu com uma parede no eixo horizontal
+		if is_on_wall():
+			become_stuck() # Parar o inimigo
+
+# Função para marcar o inimigo como parado
+func become_stuck():
+	is_stuck = true
+	velocity = Vector2.ZERO # Parar completamente o movimento
+	stuck_timer = 0.0 # Resetar o timer
 
 # Detectar quando um corpo entra na hitbox do inimigo
 func _on_area_2d_body_entered(body: Node2D) -> void:

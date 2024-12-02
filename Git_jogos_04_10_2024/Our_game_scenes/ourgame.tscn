@@ -2172,13 +2172,20 @@ shape = SubResource("RectangleShape2D_5yu2n")
 [node name="Spell2" parent="Enemys" instance=ExtResource("44_tooyn")]
 position = Vector2(2928, 352)
 
-[node name="MaoInimigo" parent="Enemys" instance=ExtResource("50_l0y0f")]
-position = Vector2(1825, 359)
+[node name="MaoInimigo3" parent="Enemys" instance=ExtResource("50_l0y0f")]
+position = Vector2(1979, 385)
+scale = Vector2(0.64, 0.64)
 collision_layer = 3
 collision_mask = 3
 
 [node name="MaoInimigo2" parent="Enemys" instance=ExtResource("50_l0y0f")]
 position = Vector2(1024, 275)
+scale = Vector2(0.64, 0.64)
+collision_layer = 3
+collision_mask = 3
+
+[node name="MaoInimigo" parent="Enemys" instance=ExtResource("50_l0y0f")]
+position = Vector2(1825, 359)
 scale = Vector2(0.64, 0.64)
 collision_layer = 3
 collision_mask = 3
