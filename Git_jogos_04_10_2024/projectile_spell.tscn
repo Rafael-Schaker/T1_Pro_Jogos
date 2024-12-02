@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2b7c81ncfk6b"]
+
+[ext_resource type="Texture2D" uid="uid://dq825yeldiuqm" path="res://fireball_10.png" id="1_lhu1c"]
+[ext_resource type="Script" path="res://projectile_spell.gd" id="1_qnx2b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3an6a"]
+radius = 23.0
+height = 100.0
+
+[node name="ProjectileSpell" type="CharacterBody2D"]
+top_level = true
+position = Vector2(0, 29)
+scale = Vector2(0.197591, 0.197591)
+script = ExtResource("1_qnx2b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lhu1c")
+
+[node name="ProjectileShape" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_3an6a")

@@ -12,6 +12,7 @@ script = ExtResource("1_l3nhy")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_1e8ih")
+volume_db = -25.0
 bus = &"SFX"
 
 [node name="Camera2D" type="Camera2D" parent="."]

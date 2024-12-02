@@ -17,14 +17,17 @@ texture = ExtResource("1_lmsin")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 416.0
-offset_top = 208.0
-offset_right = -416.0
-offset_bottom = -328.0
+offset_left = 370.5
+offset_top = 156.0
+offset_right = -372.5
+offset_bottom = -380.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game Over"
+theme_override_font_sizes/font_size = 25
+text = "YOU DIED!
+BUT PERHAPS YOUR JOURNEY CONTINUES..."
 horizontal_alignment = 1
+vertical_alignment = 1
 uppercase = true
 
 [node name="retry" type="Button" parent="."]
@@ -37,7 +40,7 @@ offset_right = -496.0
 offset_bottom = -312.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Retry"
+text = "CONTINUE"
 
 [node name="Quit" type="Button" parent="."]
 anchors_preset = 15
@@ -49,7 +52,7 @@ offset_right = -496.0
 offset_bottom = -216.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Quit"
+text = "QUIT"
 
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://cy4vc6ty11og8"]
+
+[ext_resource type="Script" path="res://options_menu.gd" id="1_fx67j"]
+[ext_resource type="Texture2D" uid="uid://do2yg3t64hv2l" path="res://scenes/360_F_555570224_pWg5NK83SS2Zk9phs4voTBb2PCIiKliz.jpg" id="2_rncq0"]
+[ext_resource type="FontFile" uid="uid://bv3lpyq30tmnn" path="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="3_6qbxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7opwk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wv73q"]
+bg_color = Color(0.334884, 0.123874, 0.0369474, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fx67j")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="."]
+top_level = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -72.0
+offset_right = 225.0
+offset_bottom = -22.0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.716296, 0.716296, 0.716296, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7opwk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wv73q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wv73q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wv73q")
+text = "BACK"
+
+[node name="QuitButton" type="Button" parent="."]
+top_level = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 929.0
+offset_top = -71.0
+offset_right = 1129.0
+offset_bottom = -21.0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.716296, 0.716296, 0.716296, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7opwk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wv73q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wv73q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wv73q")
+text = "QUIT"
+
+[node name="360F555570224PWg5nk83ss2Zk9Phs4VoTBb2pcIiKliz" type="Sprite2D" parent="."]
+position = Vector2(576, 321.25)
+scale = Vector2(2.13333, 1.78194)
+texture = ExtResource("2_rncq0")
+
+[node name="Label1" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 386.0
+offset_top = 84.0
+offset_right = 768.0
+offset_bottom = 184.0
+theme_override_fonts/font = ExtResource("3_6qbxp")
+theme_override_font_sizes/font_size = 70
+text = "CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 396.0
+offset_right = 703.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0.978815, 0.41851, 0.262906, 1)
+text = "w -> IDLE
+A -> RUN LEFT
+D -> RUN RIGHT
+S -> IDLE
+V -> ATTACK
+SPACE -> JUMP
+CTRL -> CROUCHED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
