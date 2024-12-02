@@ -6,7 +6,8 @@ extends CharacterBody2D
 @export var box : PackedScene
 
 @onready var music := $"Slower2019-01-02-8BitMenu-DavidRenda-FesliyanStudios_com"
-
+@onready var main = get_tree().get_root().get_node("FallenCirclesMain") 
+@onready var projectile = load("res://projectile_spell.tscn")
 @onready var sprite := $PlayerSprite
 @onready var idleShape := $IdleShape
 @onready var runShapeRight := $RunShapeRight
@@ -19,13 +20,16 @@ extends CharacterBody2D
 @onready var crouchedShapeLeft := $CrouchedShapeLeft
 @onready var attackShapeRight := $AttackShapeRight
 @onready var attackShapeLeft := $AttackShapeLeft
+@onready var timer := $Timer
+@onready var timerSpell := $TimerSpell
 
 @onready var jumpSound := $JumpSound
 
 var isAttacking :bool = false
 var AttackCombo :int = 1
 var attackKey :bool = false
-var isCrouch :bool =false
+var isCrouch :bool = false
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("filter"):
@@ -37,6 +41,8 @@ func _input(event: InputEvent) -> void:
 			filtro.cutoff_hz = 500
 	if event.is_action_pressed("attack") and is_on_floor():
 		attack()
+	if event.is_action_pressed("spell") and is_on_floor():
+		spell()
 
 func disable_all_shapes():
 	idleShape.disabled = true
@@ -63,11 +69,8 @@ func get_side_input():
 	var jump := Input.is_action_just_pressed("jump")
 	var crouch := Input.is_action_pressed("crouch")
 	
-	if crouch:
-		print("CROUCH1")
 	
 	if is_on_floor() and crouch:
-		sprite.play("crouch")
 		disable_all_shapes()
 		if sprite.flip_h == false:
 			crouchShapeRight.disabled = false
@@ -91,12 +94,14 @@ func get_side_input():
 	velocity.x = vel * speed
 	
 func attack():
-	if AttackCombo == 0:
+	
+	if AttackCombo == 0 or timer.is_stopped():
 		sprite.play("attack_0")
 		if sprite.flip_h == false:
 			attackShapeRight.disabled = false
 		else:
 			attackShapeLeft.disabled = false
+		timer.start()
 	elif AttackCombo == 1:
 		sprite.play("attack_1")
 		if sprite.flip_h == false:
@@ -117,7 +122,20 @@ func attack():
 		AttackCombo = 0
 	else:
 		AttackCombo += 1
+
+func spell():
+	print(timerSpell.time_left)
+	if timerSpell.time_left == 0:
+		var instance = projectile.instantiate()
+
+		instance.spawnPos = global_position
+		instance.spawnRot = global_rotation
+		main.add_child(instance)
+		timerSpell.start()
 	
+
+
+
 func animate():
 	if velocity.y < 0:
 		sprite.play("jump")

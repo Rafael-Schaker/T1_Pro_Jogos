@@ -40,9 +40,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		for child in body.get_children():
 			if child.name == "AttackShapeRight" or child.name == "AttackShapeLeft":
-				if child.disabled == false:
-					hit(body.damage())
-					return
+				if body.name == "Player":
+					if child.disabled == false:
+						hit(body.damage())
+						return
 					
 		var y_delta = position.y - body.position.y
 		var x_delta = position.x - body.position.x
@@ -52,6 +53,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			body.jump_side(500)
 		else: 
 			body.jump_side(-500)
+	elif body.name == "ProjectileSpell":
+		for child in body.get_children():
+			if child.name == "ProjectileShape":
+				hit(body.damage())
 
 # Função para gerenciar dano ao inimigo
 func hit(damage: int) -> void:
